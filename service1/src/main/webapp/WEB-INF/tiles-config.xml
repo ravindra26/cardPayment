@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">  
+<tiles-definitions>  
+    <definition name="base.definition"  
+                template="/WEB-INF/jsp/layout1.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" /> 
+        <put-attribute name="common" value="/WEB-INF/jsp/common.jsp"/> 
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />  
+    </definition>  
+    <definition name="userRegist.definition"  
+                template="/WEB-INF/jsp/layouts2.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" /> 
+        <put-attribute name="common1" value="/WEB-INF/jsp/common1.jsp"/> 
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />  
+    </definition>  
+    <definition name="login.definition"  
+                template="/WEB-INF/jsp/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" /> 
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />  
+    </definition>  
+    <definition name="login" extends="login.definition">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="createCustomer" extends="userRegist.definition">
+        <put-attribute name="title" value="Sign Up" />
+        <put-attribute name="body" value="/WEB-INF/jsp/createCustomer.jsp" />
+    </definition>
+    <definition name="home" extends="base.definition">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+    </definition>
+</tiles-definitions>  
